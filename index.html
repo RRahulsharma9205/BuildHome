@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Construct Your Dream Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+   
+  <style>
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    padding: 1rem;
+    margin: 0.5rem 0;
+}
+
+.features, .stats, .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature, .testimonial, .stats div {
+    flex: 1 1 200px; /* responsive */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .feature, .testimonial, .stats div {
+        flex: 1 1 100%; /* stack elements on smaller screens */
+    }
+}
+
+    /* Custom scrollbar for slider */
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Slider animation */
+    .slider {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Slide buttons */
+    .btn-slider {
+      background-color: #ec6c2e;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-slider:hover,
+    .btn-slider:focus {
+      background-color: #d95a21;
+      outline: none;
+    }
+
+    /* Highlight tab for Brick & Bolt section */
+    .tab-active {
+      background-color: #ec6c2e;
+      color: white;
+    }
+
+    /* Make star rating gold */
+    .star {
+      color: #f59e0b;
+    }
+
+    /* Modal alert style */
+    #modalOverlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    /* my style*/
+
+@media (max-width:650px) {
+    .mycontainer{
+        margin-left: -25px;
+        width: 250px;
+    }
+    .mycontainer{
+   /* border: 2px solid red;*/
+}
+.myclock_box{
+    width: 250px;
+   /* border: 2px solid red;*/
+}
+.myclock_box_img{
+    display: none;
+    text-align: left;
+}
+.quotes{
+    display: none;
+}
+.myborder{
+    /* border: 2px solid red;*/
+    margin-left: -33px;
+}
+.my_img_container{
+  height: 50px;
+  width: 50px;
+  
+  
+
+}
+.my_img_container img{
+  height: 100%;
+  width: 100%;
+}
+.stbutton button{
+  height: 70px;
+
+  margin-top: -20px;
+  margin-left: -60px;
+}
+.contact_us{
+    padding: 20px;
+ 
+}
+.stbutton button{
+  margin-left: -90px;
+  padding-left: -20px;
+}
+}
+ /* border: 2px solid red;
+<!-- html content for next slider -->
+   /* Custom scrollbar for horizontal logos container */
+  
+ .faq-title {
+            cursor: pointer;
+        }
+        .myfooter{
+            width: 100%;
+            
+
+        }
+        .myfooter button{
+            width: 100%;
+        }
+        .faque{
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(233, 229, 229);
+            color: #222222;
+            padding: 20px;
+            height: auto;
+            width: 100%;
+            text-transform: capitalize;
+
+        }
+.my_header{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    background-color: rgba(224, 224, 224, 0.5);
+    margin-bottom: 20px;
+
+   
+}
+.my_img_container{
+    height: 80px;
+    width: 100px;
+   
+}
+.my_img_container img{
+    height: 100%;
+    width: 100%;
+}
+
+.mymargin{
+    margin-top: 100px;
+}
+.stbutton button{
+  margin-left: -50px;
+}
+
+ </style>
+</head>
+
+<body class="bg-white font-sans text-gray-800">
+<div class="my_header">
+    <div class="my_img_container">
+        <img src="man12.jpeg" alt="loading">
+    </div>
+    <div class="contact_us my_img_container stbutton" >
+        <button id="startBtn12"
+          class="btn-slider px-6 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          Start Your Construction
+        </button>
+    </div>
+</div>
+  <!-- HERO / Top Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mycontainer ">
+    <div
+      class="grid md:grid-cols-2 gap-6 items-center border border-gray-200 rounded-xl p-6 md:p-10 shadow-lg bg-gradient-to-r from-white to-orange-100 mycontainer mymargin">
+      <!-- Left: Text & Timer -->
+      <div class="space-y-6 mycontainer">
+        <h1 class="text-3xl lg:text-4xl font-bold leading-tight">
+          CONSTRUCT YOUR <br />
+          <span class="text-orange-600">DREAM HOME</span>
+        </h1>
+
+        <p class="text-sm md:text-base text-gray-600">Ready to build your personalized dream home with
+          confidence? We're here to guide you every step of the way.</p>
+
+        <div class="flex items-center space-x-4 bg-gradient-to-l from-orange-400 to-orange-600 rounded-lg p-4 text-white shadow-lg w-max select-none myclock_box">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e54b8f4f-b250-4948-96ee-ca64d03af19e.png"
+            alt="Animated house icon with construction tools and gudelines, warm orange and white theme" class="w-16 h-16 myclock_box_img" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e4c5c162-921a-446e-9b37-6db828d6f5bf.png';" />
+          <div>
+            <div class="flex space-x-2 items-center font-semibold text-sm md:text-base uppercase tracking-wider myborder">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M5 13l4 4L19 7" />
+              </svg>
+              <span>GET 100% TRANSPARENT <span class="quotes"> QUOTES</span></span>
+            </div>
+            <div class="font-mono text-xl md:text-2xl tracking-wide mt-2" id="countdownTimer">
+              04:11:03:59
+            </div>
+          </div>
+        </div>
+
+        <button id="startBtn"
+          class="btn-slider px-6 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+          Start Your Construction
+        </button>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="mycontainer">
+        <form id="appointmentForm mycontainer"
+          class="bg-white p-6 rounded-xl shadow-lg max-w-sm mx-auto space-y-4 text-gray-800 text-sm md:text-base mycontainer"
+          onsubmit="return false;">
+          <h2 class="text-lg font-semibold text-center mb-4">Book FREE Appointment</h2>
+          <input type="text" id="fullName" name="fullName" placeholder="Full Name" required
+            class="w-full border border-gray-300 focus:border-orange-500 rounded-md px-4 py-2 focus:outline-none" />
+          <input type="email" id="email" name="email" placeholder="Email" required
+            class="w-full border border-gray-300 focus:border-orange-500 rounded-md px-4 py-2 focus:outline-none" />
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required
+            class="w-full border border-gray-300 focus:border-orange-500 rounded-md px-4 py-2 focus:outline-none" />
+          <select id="service" name="service" class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-orange-500">
+            <option value="" disabled selected>I need a service</option>
+            <option value="new_construction">New Construction</option>
+            <option value="renovation">Renovation</option>
+            <option value="consultation">Consultation</option>
+          </select>
+          <label class="flex items-center space-x-2 text-sm">
+            <input type="checkbox" id="terms" required />
+            <span>I accept the terms & conditions</span>
+          </label>
+          <button type="submit"
+            class="btn-slider w-full py-3 rounded-md font-semibold text-white hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+            Book Free Appointment
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-14">
+    <h2 class="text-2xl font-bold text-center mb-10">Why Choose Us for Home Construction in Delhi-NCR?</h2>
+    <div
+      class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center text-sm md:text-base font-semibold text-gray-700">
+      <div class="border rounded-lg p-4 space-y-2">
+        <img src="man12.jpeg" alt="Fast and On-Time Delivery icon showing a truck with speed lines"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/64x64/png?text=Icon';" />
+        <p class="text-orange-600">100% ON TIME DELIVERY</p>
+      </div>
+      <div class="border rounded-lg p-4 space-y-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/63f17b06-fb39-4d06-8359-7daf1c968974.png" alt="Transparency shield icon in friendly style with tick marks"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b177e8bd-4d8f-41ed-a3c7-536b10cba803.png';" />
+        <p class="text-orange-600">100% TRANSPARENCY</p>
+      </div>
+      <div class="border rounded-lg p-4 space-y-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05e940cb-a673-40c6-ba4c-34b8e455d1d2.png" alt="Certified quality icon with shield and ribbon in orange and black"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/60x60/png?text=Icon';" />
+        <p class="text-orange-600">HIGH QUALITY BUILDING MATERIALS</p>
+      </div>
+      <div class="border rounded-lg p-4 space-y-2">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e3c33cb7-4683-4d2c-98d3-d67bf804ed6d.png" alt="Dedicated project managers icon showing a professional figure"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/60x60/png?text=Icon';" />
+        <p class="text-orange-600">DEDICATED PROJECT MANAGERS</p>
+      </div>
+      <div class="border rounded-lg p-4 space-y-2 md:col-span-2 lg:col-span-1">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/70bf17cb-f75d-4420-8522-13a7470b87dc.png" alt="Zero stress icon with peaceful face and checked box"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/60x60/png?text=Icon';" />
+        <p class="text-orange-600">ZERO STRESS</p>
+      </div>
+      <div class="border rounded-lg p-4 space-y-2 md:col-span-2 lg:col-span-1">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/868acf43-6efc-4d23-b2a3-0c86986535df.png" alt="Money safety icon with shield and currency symbol"
+          class="mx-auto" onerror="this.onerror=null; this.src='https://placehold.co/60x60/png?text=Icon';" />
+        <p class="text-orange-600">MONEY SAFETY</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <button id="startBtn2"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- You Made The Right Choice -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 bg-orange-50 rounded-lg text-center space-y-8">
+    <h3 class="text-3xl font-bold">You Made the Right Choice</h3>
+    <p class="max-w-3xl mx-auto text-gray-700 text-sm md:text-base">
+      We deliver trusted construction, verified customer feedback, and transparent dealings for your peace of mind.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 font-mono text-lg md:text-xl text-orange-600 font-extrabold">
+      <div class="bg-white border border-orange-400 rounded-lg p-6 shadow-md">
+        <div class="text-5xl font-bold leading-none">9000+</div>
+        <div>Total Projects</div>
+      </div>
+      <div class="bg-white border border-orange-400 rounded-lg p-6 shadow-md">
+        <div class="text-5xl font-bold leading-none">11000+</div>
+        <div>Team Size</div>
+      </div>
+      <div class="bg-white border border-orange-400 rounded-lg p-6 shadow-md">
+        <div class="text-5xl font-bold leading-none">100+</div>
+        <div>Customer Reviews</div>
+      </div>
+    </div>
+    <div class="text-orange-700 font-semibold">and 10M+ sq. ft. constructed area</div>
+  </section>
+
+  <!-- Available Cities (Icon grid) -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 text-center text-gray-700">
+    <h4 class="text-xl font-semibold mb-6">We are available in 10+ cities</h4>
+    <div class="grid grid-cols-5 md:grid-cols-10 gap-6 max-w-5xl mx-auto">
+      <!-- City icon placeholders with alt text -->
+      <div title="City: Delhi" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/62dfd2d5-b36a-4b19-ac0e-026008e5e50b.png" alt="Icon representing the city of Delhi, stylized modern building silhouette" class="mb-1" />
+        <span class="text-xs">Delhi</span>
+      </div>
+      <div title="City: Gurgaon" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/82d49c4c-f772-4654-b033-c3a6fe49ae8a.png" alt="Icon representing the city of Gurgaon, with skyscraper outline" class="mb-1" />
+        <span class="text-xs">Gurgaon</span>
+      </div>
+      <div title="City: Noida" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fb4ada0e-68d3-4f85-be1a-f50cefd40040.png" alt="Icon representing the city of Noida with urban landscape silhouette" class="mb-1" />
+        <span class="text-xs">Noida</span>
+      </div>
+      <div title="City: Faridabad" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/62f25d3a-1781-460c-a38c-5a5926f59d57.png" alt="Icon representing the city of Faridabad, factory and high-rise" class="mb-1" />
+        <span class="text-xs">Faridabad</span>
+      </div>
+      <div title="City: Ghaziabad" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1582a78b-b0c6-41d1-91c2-0ce3a420333f.png" alt="Icon representing the city of Ghaziabad with building blocks" class="mb-1" />
+        <span class="text-xs">Ghaziabad</span>
+      </div>
+      <div title="City: Jaipur" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/37d542fc-8e2c-4ca7-ac41-73851f65c2d3.png" alt="Icon representing Jaipur city with historic modern blend silhouette" class="mb-1" />
+        <span class="text-xs">Jaipur</span>
+      </div>
+      <div title="City: Chandigarh" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/acde6689-a10d-4e8e-9697-8e2736879f0b.png" alt="Icon representing Chandigarh city, leafy urban area silhouette" class="mb-1" />
+        <span class="text-xs">Chandigarh</span>
+      </div>
+      <div title="City: Lucknow" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/834b4cc3-7a5b-42bd-93db-83a1c2b43959.png" alt="Icon representing Lucknow city with monument silhouette" class="mb-1" />
+        <span class="text-xs">Lucknow</span>
+      </div>
+      <div title="City: Kanpur" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7efc3409-2c02-46fc-a2bf-c037b7e15150.png" alt="Icon representing Kanpur city, industrial with cityscape" class="mb-1" />
+        <span class="text-xs">Kanpur</span>
+      </div>
+      <div title="City: Meerut" class="flex flex-col items-center justify-center">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2136c76e-5f9e-40a0-972a-bd62305ae1c8.png" alt="Icon representing Meerut city skyline with traditional buildings" class="mb-1" />
+        <span class="text-xs">Meerut</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Slider -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20">
+    <h4 class="text-2xl font-bold text-center mb-8">What are our Customers Saying?</h4>
+    <div id="testimonialSlider" tabindex="0"
+      class="slider flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 px-2 py-4 scrollbar-hide" aria-label="Customer Testimonials">
+      <!-- Testimonial 1 -->
+      <article
+        class="snap-start shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 flex flex-col space-y-4 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <img src="man12.jpeg"
+          alt="Smiling woman giving a thumbs up in a garden with bright sunny background" class="w-20 h-20 rounded-full mx-auto" />
+        <blockquote class="text-gray-600 text-sm md:text-base italic">"Exceptional service and timely delivery! Their support
+          made building our home stress-free."</blockquote>
+        <div class="text-center font-semibold text-orange-600 text-lg">Sanya D.</div>
+        <div class="flex justify-center space-x-1">
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+        </div>
+      </article>
+
+      <!-- Testimonial 2 -->
+      <article
+        class="snap-start shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 flex flex-col space-y-4 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/22002afa-51e8-4b9a-8700-e725e650508f.png"
+          alt="Happy family posing outside newly built modern house smiling and showing thumbs up"
+          class="w-20 h-20 rounded-full mx-auto" />
+        <blockquote class="text-gray-600 text-sm md:text-base italic">"Professional and transparent team. From design to
+          delivery, everything was smooth and hassle-free."</blockquote>
+        <div class="text-center font-semibold text-orange-600 text-lg">Mrinal & Family</div>
+        <div class="flex justify-center space-x-1">
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+        </div>
+      </article>
+
+      <!-- Testimonial 3 -->
+      <article
+        class="snap-start shrink-0 w-80 bg-white rounded-lg shadow-lg p-6 flex flex-col space-y-4 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8809f562-25a7-4324-8558-784d5f6b5897.png" alt="Older man with sunglasses smiling in front of house facade"
+          class="w-20 h-20 rounded-full mx-auto" />
+        <blockquote class="text-gray-600 text-sm md:text-base italic">"Reliable, experienced contractors with quality
+          workmanship. I recommend them to everyone."</blockquote>
+        <div class="text-center font-semibold text-orange-600 text-lg">S. Verma</div>
+        <div class="flex justify-center space-x-1">
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+          <svg class="star w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+            <path
+              d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.945a1 1 0 00.95.69h4.153c.969 0 1.371 1.24.588 1.81l-3.36 2.438a1 1 0 00-.364 1.118l1.285 3.945c.3.921-.755 1.688-1.54 1.118L10 13.347l-3.36 2.438c-.784.57-1.838-.197-1.539-1.118l1.285-3.945a1 1 0 00-.363-1.118L3.022 9.372c-.783-.57-.38-1.81.588-1.81h4.152a1 1 0 00.95-.69l1.287-3.945z" />
+          </svg>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-10">
+      <button id="startBtn3"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- Construction Packages Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20">
+    <h4 class="text-2xl font-bold mb-8 text-center">Our Construction Packages</h4>
+    <div class="max-w-4xl mx-auto space-y-6 text-gray-700 text-base md:text-lg">
+      <article class="border border-orange-400 rounded-lg p-6 hover:shadow-lg transition cursor-default">
+        <h5 class="text-xl font-semibold text-orange-600">Basic Package</h5>
+        <p>₹ 1,500 per sq.ft - Basic construction with standard materials and expert supervision.</p>
+      </article>
+      <article class="border border-orange-400 rounded-lg p-6 hover:shadow-lg transition cursor-default">
+        <h5 class="text-xl font-semibold text-orange-600">Classic Package</h5>
+        <p>₹ 2,000 per sq.ft - Includes premium materials and semi-custom finishes.</p>
+      </article>
+      <article class="border border-orange-400 rounded-lg p-6 hover:shadow-lg transition cursor-default">
+        <h5 class="text-xl font-semibold text-orange-600">Premium Package</h5>
+        <p>₹ 2,750 per sq.ft - High-end materials with design consultations and finishes.</p>
+      </article>
+      <article class="border border-orange-400 rounded-lg p-6 hover:shadow-lg transition cursor-default">
+        <h5 class="text-xl font-semibold text-orange-600">Elite Package</h5>
+        <p>₹ 3,500 per sq.ft - Fully customized luxury home construction, top-tier materials & services.</p>
+      </article>
+    </div>
+    <div class="text-center mt-10">
+      <button id="startBtn4"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- Projects Section with Slider -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20">
+    <h4 class="text-2xl font-bold mb-8 text-center">Our Projects</h4>
+    <div id="projectSlider" tabindex="0"
+      class="slider flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-6 px-2 py-4 scrollbar-hide" aria-label="Our Construction Projects">
+      <!-- Project 1 -->
+      <article
+        class="snap-start shrink-0 w-72 rounded-lg shadow-lg bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <div class="relative aspect-video bg-gray-100">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/XRlEYQ-g-KM" title="Project 1 Video"
+            frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="p-4">
+          <h5 class="font-semibold text-orange-600 text-lg mb-1 truncate" title="Modern Residence, Jaipur">Modern
+            Residence, Jaipur</h5>
+          <p class="text-gray-600 text-sm">A contemporary four-bedroom house with eco-friendly materials and solar panels.
+          </p>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article
+        class="snap-start shrink-0 w-72 rounded-lg shadow-lg bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <div class="relative aspect-video bg-gray-100">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/EkQn3xe9Jxk" title="Project 2 Video"
+            frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="p-4">
+          <h5 class="font-semibold text-orange-600 text-lg mb-1 truncate" title="Luxury Villa, Gurgaon">Luxury Villa,
+            Gurgaon</h5>
+          <p class="text-gray-600 text-sm">Spacious villa with landscaped garden and innovative home automation.</p>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article
+        class="snap-start shrink-0 w-72 rounded-lg shadow-lg bg-white overflow-hidden focus:outline-none focus:ring-2 focus:ring-orange-400">
+        <div class="relative aspect-video bg-gray-100">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/CrAqlpA_9ig" title="Project 3 Video"
+            frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="p-4">
+          <h5 class="font-semibold text-orange-600 text-lg mb-1 truncate" title="Apartment Complex, Delhi">Apartment
+            Complex, Delhi</h5>
+          <p class="text-gray-600 text-sm">A multi-unit apartment complex designed for energy efficiency and urban living.
+          </p>
+        </div>
+      </article>
+    </div>
+    <div class="text-center mt-10">
+      <button id="startBtn5"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- Brick & Bolt Comparison Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 bg-white rounded-lg shadow-sm">
+    <h4 class="text-2xl font-bold mb-6 text-center">Why is Brick & Bolt the Best for Home Construction in Delhi-NCR?</h4>
+    <div id="tabContainer" class="max-w-5xl mx-auto space-y-6">
+      <div class="flex justify-center border rounded-lg bg-orange-50 overflow-hidden">
+        <button id="brickBtn" class="tab-active px-6 py-3 font-semibold transition w-1/2 focus:outline-none" aria-pressed="true" aria-controls="brickContent">Brick & Bolt</button>
+        <button id="otherBtn" class="px-6 py-3 font-semibold transition w-1/2 focus:outline-none" aria-pressed="false" aria-controls="otherContent">Other Contractors</button>
+        
+      </div>
+
+      <div id="brickContent" class="space-y-4 px-6" role="tabpanel" aria-labelledby="brickBtn">
+        <ul class="list-inside list-disc text-gray-700 space-y-2">
+          <li>Mock up home for final look & feel before construction</li>
+          <li>Full house built in modular stages with 3-day inspection cycles</li>
+          <li>100% insured & disaster-resistant facilities with parkland</li>
+          <li>Use of only authorized BIS approved materials ensuring strict quality</li>
+          <li>₹1000 crore construction insurance with 5-star warranty on finishes</li>
+          <li>2300+ quality & safety checks at every construction stage</li>
+        </ul>
+      </div>
+
+      <div id="otherContent" class="hidden space-y-4 px-6 text-gray-600" role="tabpanel" aria-labelledby="otherBtn">
+        <ul class="list-inside list-disc space-y-2 opacity-70">
+          <li>Usually builds per sqft approximations only without mockups</li>
+          <li>Project transparency & data kept limited, often opaque processes</li>
+          <li>Use of cheaper materials & limited insurance coverage</li>
+          <li>Limited warranty for finishes with minimal quality checks</li>
+          <li>No disaster insurance & limited safety protections on site</li>
+          <li>Unpredictable construction timeline with variable team skills</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <button id="startBtn6"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- Quality Assurance Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 text-center text-gray-700 space-y-6">
+    <p class="text-sm md:text-base max-w-4xl mx-auto">
+      India’s only Home Construction Company with QASCON-registered quality assessment, ensuring 470+ quality checks per floor.
+    </p>
+    <div class="flex flex-wrap justify-center gap-12 items-center">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d47bca0a-8611-41a9-9e0c-763b9567b9e8.png" alt="QASCON registered quality assessment logo in bold orange and white style" class="h-20"
+        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7fef63f6-0344-4a2b-adaf-21ae4037c911.png';" />
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/93220d2f-3783-46e0-b718-80cd32ab6cf0.png" alt="A70+ certified home construction badge in orange and black style" class="h-20"
+        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c69f2699-d407-4968-afd4-81898606244a.png';" />
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e37a17c3-6368-4fc0-ac33-0a0827ceb8e8.png" alt="10 year warranty badge with shield icon on orange background" class="h-20"
+        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/79b2158a-24bb-43c8-a7d6-592c7e0887fd.png';" />
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/41d4f562-8f6f-4539-a1f1-de7c0ff6a87e.png" alt="Vastu compliant certification icon with sacred geometry style" class="h-20"
+        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5041b455-cbe6-45be-ae5f-ee1e7f67afc1.png';" />
+    </div>
+  </section>
+
+  <!-- Construction Monitoring Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="flex justify-center md:justify-end">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ea3be5a-7afc-40bd-bde2-597acd718414.png"
+        alt="Mobile app mockup showing dashboard with home construction progress, schedules, inspections, and finance tracker"
+        class="w-72 h-auto rounded-lg shadow-xl" onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8d31a533-516a-4a4e-a4ba-b59401ad2508.png';" />
+    </div>
+    <div class="space-y-6 text-gray-800">
+      <h4 class="text-2xl font-bold">Home Construction Monitoring Made Easy</h4>
+      <ul class="list-disc list-inside space-y-4 text-lg md:text-xl">
+        <li><strong>Track Your Progress:</strong> Regular updates on milestones & inspection reports.</li>
+        <li><strong>Raise Tickets:</strong> Quickly report any built-in faults or queries directly via the app.</li>
+        <li><strong>Get Weekly Updates:</strong> Detailed video walkthroughs and progress photos every week.</li>
+        <li><strong>Track Finances:</strong> Real-time budget & expense tracking to avoid surprises.</li>
+      </ul>
+      <button id="startBtn7"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400 mt-6">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- Experience Centre Section -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 text-center">
+    <h4 class="text-2xl font-bold mb-6">Experience Centre</h4>
+    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7d192393-99e0-42dc-a722-f06f4b07da9b.png"
+      alt="Modern experience centre showroom with bright lighting, consultation desks, customers and staff interacting in a welcoming environment"
+      class="rounded-lg mx-auto shadow-lg max-w-full h-auto"
+      onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bcb0b77d-e59f-4cdb-b202-ea90275ae47f.png';" />
+    <div class="text-center mt-8">
+      <button id="startBtn8"
+        class="btn-slider px-8 py-3 rounded-md font-semibold text-white shadow-lg hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+        Start Your Construction
+      </button>
+    </div>
+  </section>
+
+  <!-- How It Works Section with timeline -->
+  <section class="max-w-7xl mx-auto p-6 md:px-10 lg:px-20 mt-20 text-center space-y-16">
+    <h4 class="text-2xl font-bold mb-6">How It Works?</h4>
+
+    <ol class="relative border-l border-orange-300 max-w-4xl mx-auto text-left space-y-8">
+      <li class="ml-6">
+        <span
+          class="absolute flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full -left-4 ring-4 ring-white text-white font-bold">1</span>
+        <h5 class="font-semibold text-lg mb-1">Consultation & Approval</h5>
+        <p class="text-gray-700">Schedule your appointment, discuss your dream home design, finalize budget, and approve
+          plans.</p>
+      </li>
+      <li class="ml-6">
+        <span
+          class="absolute flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full -left-4 ring-4 ring-white text-white font-bold">2</span>
+        <h5 class="font-semibold text-lg mb-1">Mock-up & Design Phase</h5>
+        <p class="text-gray-700">Virtual and physical mock-ups made, revisions done, and final materials selected for your
+          home.</p>
+      </li>
+      <li class="ml-6">
+        <span
+          class="absolute flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full -left-4 ring-4 ring-white text-white font-bold">3</span>
+        <h5 class="font-semibold text-lg mb-1">Construction & Quality Checks</h5>
+        <p class="text-gray-700">Our expert team handles construction in stages with 2300+ inspections and progress
+          tracking.</p>
+      </li>
+      <li class="ml-6">
+        <span
+          class="absolute flex items-center justify-center w-8 h-8 bg-orange-600 rounded-full -left-4 ring-4 ring-white text-white font-bold">4</span>
+        <h5 class="font-semibold text-lg mb-1">Handover & Support</h5>
+        <p class="text-gray-700">Walkthrough, final quality assurance, documentation, and ongoing warranty support. Your
+          dream home is ready!</p>
+      </li>
+    </ol>
+
+    <div class="max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg bg-gray-100">
+      <video controls width="100%" preload="metadata" aria-label="How It Works video demonstration">
+        <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Modal / Alert Window -->
+  <div id="modalOverlay"
+    class="fixed inset-0 hidden justify-center items-center bg-black bg-opacity-50 z-50 px-4 py-10">
+    <div
+      class="bg-white rounded-lg max-w-md w-full p-8 shadow-xl text-center relative text-gray-800 border-4 border-orange-400">
+      <button id="modalClose" aria-label="Close modal"
+        class="absolute top-4 right-4 text-xl font-bold text-gray-600 hover:text-orange-600 focus:outline-none">&times;</button>
+      <h3 class="text-2xl font-bold mb-4">Start Your Construction</h3>
+      <p class="mb-4">Please fill in the form below or call us at <a href="tel:+911234567890"
+          class="text-orange-600 underline">+91 9205658859</a> to start your home construction journey.</p>
+      <form id="modalForm" class="space-y-4 text-left" onsubmit="return false;" method="post" action="form.php">
+        <label for="modalName" class="block font-semibold">Full Name</label>
+        <input type="text" id="modalName" name="modalName" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-orange-400" />
+        <label for="modalEmail" class="block font-semibold">Email</label>
+        <input type="email" id="modalEmail" name="modalEmail" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-orange-400" />
+        <label for="modalPhone" class="block font-semibold">Phone</label>
+        <input type="tel" id="modalPhone" name="modalPhone" required
+          class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-orange-400" />
+        <div class="text-center">
+          <button id="modalSubmit"
+            class="btn-slider px-8 py-3 rounded-md font-semibold text-white hover:shadow-xl transition shadow-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-400">
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- html content for next slider -->
+  <!-- Section Container  -->
+  
+  <!-- Section Container  -->
+  <section class="bg-gray-50 py-14 px-6 md:px-12 lg:px-20 text-center select-none">
+
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-semibold mb-3 leading-tight">
+      Our Banking Partners
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-gray-500 max-w-xl mx-auto mb-10 md:mb-14 text-sm md:text-base">
+      Helping customers get easy access to loans for home construction
+    </p>
+
+    <!-- Logo container scrollable horizontally on small screens, grid on larger -->
+    <div class="flex scrollbar-hide overflow-x-auto gap-4 max-w-5xl mx-auto px-2 md:grid md:grid-cols-6 md:gap-6">
+
+      <!-- Each logo card -->
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ae97464-fae9-4af6-b2f9-dfb2489f1250.png"
+          alt="Bajaj Finserv logo in blue and white with stylized B letter"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/507e9e57-37b7-4572-aa10-5642d739634a.png';"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6279ab91-c9c4-4d05-af60-5d6beb854a68.png"
+          alt="BASIC bank logo black and white minimal text style"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/140x40?text=Logo+Unavailable';"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aea6a2f4-d8d9-4967-a5e4-b11357d4f960.png"
+          alt="Godrej Housing Finance logo with colorful bars and text"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/140x40?text=Logo+Unavailable';"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c8b93635-2ca8-4ed4-a2d7-d7d1e5546754.png"
+          alt="HDFC Home Loans logo with red and black colors and tagline in Hindi"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/140x40?text=Logo+Unavailable';"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0991dfe4-3900-4257-b6da-c4cb417fb83a.png"
+          alt="Housing.com logo with yellow style icon and text"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/140x40?text=Logo+Unavailable';"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="flex-shrink-0 md:flex-shrink md:flex md:items-center md:justify-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-default" style="min-width: 140px;">
+        <img
+          src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6fc45fbd-eeec-4bb7-8e81-9722697fac54.png"
+          alt="SBI Home Loans logo blue round emblem with text"
+          class="max-h-10 object-contain mx-auto md:mx-0"
+          onerror="this.onerror=null;this.src='https://placehold.co/140x40?text=Logo+Unavailable';"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+    <!-- Call to action button -->
+    <div class="mt-12">
+      <button id="startBtn9"
+        type="button"
+        class="inline-block bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:ring-orange-400 text-white font-semibold py-3 px-8 rounded-md transition-colors"
+        aria-label="Start Your Construction"
+      >
+        Start Your Construction
+      </button>
+    </div>
+
+  </section>
+   <!-- html content end -->
+    <h1 class="faque">faque</h1>
+    
+<div class="container mt-5">
+    <h2>FAQs</h2>
+
+    <div class="accordion" id="faqAccordion">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    What home construction services does Brick & Bolt offer?
+                </h5>
+            </div>
+            <div id="faq1" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Brick & Bolt offers a variety of home construction services including design, project management, and execution.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faq2" aria-expanded="true" aria-controls="faq2">
+                    How much time will it take to complete home construction in Delhi-NCR?
+                </h5>
+            </div>
+            <div id="faq2" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    The time for completion varies but typically ranges from 6 to 12 months depending on the project specifications.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faq3" aria-expanded="true" aria-controls="faq3">
+                    Do I have to pay the full amount before the home construction starts?
+                </h5>
+            </div>
+            <div id="faq3" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    No, payments are usually made in stages based on project milestones.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h5 class="faq-title" data-toggle="collapse" data-target="#faq4" aria-expanded="true" aria-controls="faq4">
+                    What warranty or post-construction support does Brick & Bolt offer?
+                </h5>
+            </div>
+            <div id="faq4" class="collapse" data-parent="#faqAccordion">
+                <div class="card-body">
+                    Brick & Bolt provides warranties for structural integrity and offers support for maintenance post-construction.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- footer button start -->
+  <div class="mt-12 myfooter" id="startBtn11">
+      <button
+        type="button"
+        class="inline-block bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:ring-orange-400 text-white font-semibold py-3 px-8 rounded-md transition-colors"
+        aria-label="Start Your Construction"
+      >
+        Start Your Construction/Mad By Rahul Sharma
+      </button>
+    </div>
+ <!-- footer button end  -->
+  <script>
+    // Countdown timer for hero section
+    const countdownTimer = () => {
+      // Hardcoded for example: 4 days, 11 hours, 3 minutes, 59 seconds from now
+      // Real case: calculate until event date
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() + 4);
+      endDate.setHours(endDate.getHours() + 11);
+      endDate.setMinutes(endDate.getMinutes() + 3);
+      endDate.setSeconds(endDate.getSeconds() + 59);
+
+      const timerElem = document.getElementById('countdownTimer');
+
+      const updateTimer = () => {
+        const now = new Date();
+        const diff = endDate - now;
+        if (diff <= 0) {
+          timerElem.textContent = "00:00:00:00";
+          clearInterval(interval);
+          return;
+        }
+        let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        let minutes = Math.floor((diff / (1000 * 60)) % 60);
+        let seconds = Math.floor((diff / 1000) % 60);
+
+        timerElem.textContent =
+          String(days).padStart(2, '0') + ":" +
+          String(hours).padStart(2, '0') + ":" +
+          String(minutes).padStart(2, '0') + ":" +
+          String(seconds).padStart(2, '0');
+      };
+
+      updateTimer();
+      const interval = setInterval(updateTimer, 1000);
+    };
+
+    countdownTimer();
+
+    // Modal functionality
+    const modalOverlay = document.getElementById('modalOverlay');
+    const modalCloseBtn = document.getElementById('modalClose');
+    const btnsStart = document.querySelectorAll('#startBtn, #startBtn2, #startBtn3, #startBtn4, #startBtn5, #startBtn6, #startBtn7, #startBtn8, #startBtn9, #startBtn10, #startBtn11,#startBtn12');
+
+    btnsStart.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modalOverlay.classList.remove('hidden');
+        modalOverlay.classList.add('flex');
+        document.body.style.overflow = 'hidden'; // prevent background scroll
+      });
+    });
+
+    modalCloseBtn.addEventListener('click', () => {
+      modalOverlay.classList.add('hidden');
+      modalOverlay.classList.remove('flex');
+      document.body.style.overflow = ''; // restore scroll
+    });
+
+    // Close modal on clicking outside modal box
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalCloseBtn.click();
+      }
+    });
+
+    // Modal form submission
+    const modalForm = document.getElementById('modalForm');
+
+    modalForm.addEventListener('submit', () => {
+      // Simple validation and alert
+      const name = modalForm.modalName.value.trim();
+      const email = modalForm.modalEmail.value.trim();
+      const phone = modalForm.modalPhone.value.trim();
+
+      if (name === '' || email === '' || phone === '') {
+        alert('Please fill all fields.');
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your request to start construction has been received. We will contact you soon.`);
+      modalCloseBtn.click();
+      modalForm.reset();
+    });
+
+    // Appointment form submission alert
+    const appointmentForm = document.getElementById('appointmentForm');
+    appointmentForm.addEventListener('submit', () => {
+      const fullName = appointmentForm.fullName.value.trim();
+      const email = appointmentForm.email.value.trim();
+      const phone = appointmentForm.phone.value.trim();
+      const service = appointmentForm.service.value;
+
+      if (!fullName || !email || !phone || !service || !appointmentForm.terms.checked) {
+        alert('Please fill all fields and accept the terms.');
+        return;
+      }
+
+      alert(`Thank you, ${fullName}! Your free appointment booking request has been received. We will contact you soon.`);
+      appointmentForm.reset();
+    });
+
+    // Brick & Bolt Tabs toggle
+    const brickBtn = document.getElementById('brickBtn');
+    const otherBtn = document.getElementById('otherBtn');
+    const brickContent = document.getElementById('brickContent');
+    const otherContent = document.getElementById('otherContent');
+
+    brickBtn.addEventListener('click', () => {
+      brickBtn.classList.add('tab-active');
+      brickBtn.setAttribute('aria-pressed', 'true');
+      otherBtn.classList.remove('tab-active');
+      otherBtn.setAttribute('aria-pressed', 'false');
+      brickContent.classList.remove('hidden');
+      otherContent.classList.add('hidden');
+    });
+
+    otherBtn.addEventListener('click', () => {
+      otherBtn.classList.add('tab-active');
+      otherBtn.setAttribute('aria-pressed', 'true');
+      brickBtn.classList.remove('tab-active');
+      brickBtn.setAttribute('aria-pressed', 'false');
+      otherContent.classList.remove('hidden');
+      brickContent.classList.add('hidden');
+    });
+
+    // Keyboard trapped focus on modal when open
+    document.addEventListener('keydown', (e) => {
+      if (!modalOverlay.classList.contains('flex')) return;
+      const focusableElements =
+        'input, button, select, textarea, a[href], area[href], iframe, object, embed, [tabindex]:not([tabindex="-1"]), [contenteditable]';
+      const modalFocusableElements = Array.from(modalOverlay.querySelectorAll(focusableElements));
+      const firstFocusableElement = modalFocusableElements[0];
+      const lastFocusableElement = modalFocusableElements[modalFocusableElements.length - 1];
+
+      if (e.key === 'Tab') {
+        if (e.shiftKey) { // Shift + Tab
+          if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            e.preventDefault();
+          }
+        } else { // Tab
+          if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+
+      if (e.key === 'Escape') {
+        modalCloseBtn.click();
+      }
+    });
+  </script>
+</body>
+
+</html>
+
